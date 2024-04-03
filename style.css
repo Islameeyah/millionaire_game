@@ -1,0 +1,206 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('wwtbam.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    position: relative;
+}
+.main-container{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+}
+#prize{
+    color: #fff;
+    background-color: rgb(4, 4, 65);
+    padding: 10px 48px;
+    border-radius: 15px;
+}
+#prize .unlost{
+    color: yellow;
+    font-size: 18px;
+}
+#prize p{
+    font-size: 18px;
+}
+#prize p span{
+    margin-right: 28px;
+}
+
+.activePrizeColor{
+    color: white;
+    background-color: red;
+}
+.container {
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    padding: 30px 50px;
+    width: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#question-container {
+    margin: 20px 0;
+    font-size: 23px;
+}
+
+#options-container {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 40px;
+}
+
+#options-container button{
+    background-color: rgb(4, 4, 65);
+    border: 1px solid rgb(4, 4, 65);
+    color: #fff;
+    padding: 8px 18px;
+    border-radius: 19px; 
+    font-size: 18px;
+}
+
+#lifelines-container{
+    background-color: rgb(4, 4, 65);
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 40%;
+}
+
+#lifelines-container > button{
+    padding: 5px 10px;
+    background-color: #fff;
+    color: rgb(4, 4, 65);
+    cursor: pointer;
+    border-radius: 8px;
+    margin: 10px;
+}
+
+#result {
+    margin-top: 20px;
+    font-weight: bold;
+}
+#timer {
+    text-align: center;
+    margin: 25px 0;
+}
+
+#timer span{
+    margin-top: 10px;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #777;
+    border-radius: 50%;
+    font-size: 28px;
+}
+
+#timer-countdown {
+    color: red;
+}
+#result{
+    font-size: 18px;
+}
+#controls-container{
+    padding: 20px 0;
+    text-align: center;
+}
+#controls-container button{
+    padding: 5px 10px;
+    background-color: #fff;
+    color: rgb(4, 4, 65);
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 8px;
+}
+
+.money-active{
+    background-color: pink;
+}
+
+.GameOver-Container{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 100%;
+    overflow: hidden;
+}
+.gameover{
+    background-color: red;
+    height: 50%;
+    width: 50%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+.gameover h1{
+    animation: 5s slidein;
+}
+.gameover a{
+    text-decoration: none;
+    margin-top: 10px;
+    color: blue;
+    font-size: 20px;
+    background-color: antiquewhite;
+    padding: 5px 10px;
+}
+.gameover a:hover{
+    background-color: blue;
+    color: antiquewhite;
+}
+
+@media all and (max-width: 768px){
+    .container{
+        position: absolute;
+        top: 35%;
+        left: 5%;
+        transform: translate(-5%, 10%);
+        width: 40%;
+        padding-bottom: 0;
+    }
+    .main-container{
+        display: flex;
+        position: relative;
+    }
+    #lifelines-container{
+        top: 50%;
+        left: 20%;
+        
+    }
+    #options-container {
+        gap: 10px;
+    }
+    #options-container button{
+        font-size: 12px;
+    }
+    #question-container{
+        font-size: 15px;
+        
+    }
+    #prize{
+        position: absolute;
+        top: 10%;
+        left: 60%;
+    }
+    #timer {
+        margin: 15px 0;
+    }
+    #timer span{
+        padding: 5px 20px;
+        font-size: 20px;
+
+    }
+
+}
+
+

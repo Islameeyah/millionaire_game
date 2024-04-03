@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Who wants to be a millionaire</title>
+</head>
+<body>
+    <div class="main-container">
+        <div class="main">
+            <div class="logo">
+                <img src="millionaire logo.png" height="100px" width="120px" alt="">
+            </div>
+            <div id="lifelines-container">
+                <button onclick="askAudience()">Ask the Audience</button>
+                <button id="btn-fifty">50-50</button>
+                <button id="callAfriend">Call a Friend</button>
+            </div>
+
+        </div>
+        <div id="prize" class="prizeList">
+            <p class="unlost"><span>15</span> $10,000,000</p>
+            <p><span>14</span> $5,000,000</p>
+            <p><span>13</span> $2,500,000</p>
+            <p><span>12</span> $1,000,000</p>
+            <p><span>11</span> $500,000</p>
+            <p class="unlost"><span>10</span> $100,000</p>
+            <p><span>9</span> $50,000</p>
+            <p><span>8</span> $30,000</p>
+            <p><span>7</span> $20,000</p>
+            <p><span>6</span> $10,000</p>
+            <p class="unlost"><span>5</span> $5,000</p>
+            <p><span>4</span> $4,000</p>
+            <p><span>3</span> $3,000</p>
+            <p class="prize_2"><span>2</span> $2,000</p>
+            <p class="prize_1"><span>1</span> $1,000</p>
+        </div>
+
+    </div>
+    <div class="container">
+        <div id="timer"><span id="timer-countdown"></span></div>
+
+        <div id="question-container" >
+            <p id="questionss" class="question"></p>
+            <div id="options-container"></div>
+        </div>
+
+        <div id="result"></div>
+        
+        <div id="controls-container">
+            <!-- <button onclick="checkAnswer()">Next Question</button> -->
+            <button id="walk-away-button">Walk Away</button>
+        </div>
+    </div>
+
+    <audio class="win" src="snd/win.mp3"></audio>
+    <audio class="lose" src="snd/lose.mp3"></audio>
+    <audio class="time-up" src="snd/timeup.mp3"></audio>
+    <audio src="snd/question.mp3" class="question-sound"></audio>
+
+    <script src="questions.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
