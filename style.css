@@ -159,48 +159,92 @@ body {
     color: antiquewhite;
 }
 
-@media all and (max-width: 768px){
-    .container{
-        position: absolute;
-        top: 35%;
-        left: 5%;
-        transform: translate(-5%, 10%);
-        width: 40%;
-        padding-bottom: 0;
+/* Tablets (portrait) */
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
     }
-    .main-container{
-        display: flex;
-        position: relative;
-    }
-    #lifelines-container{
-        top: 50%;
-        left: 20%;
-        
+    .container {
+        width: 50%;
+        padding: 15px;
+        left: 30%;
     }
     #options-container {
-        gap: 10px;
+        grid-template-columns: repeat(1, 1fr);
+        /* gap: 10; */
     }
-    #options-container button{
-        font-size: 12px;
+    #prize {
+        padding: 10px 40px;
+        margin-left: 400px;
     }
-    #question-container{
-        font-size: 15px;
-        
-    }
-    #prize{
-        position: absolute;
-        top: 10%;
-        left: 60%;
-    }
-    #timer {
-        margin: 15px 0;
-    }
-    #timer span{
-        padding: 5px 20px;
+    #question-container {
         font-size: 20px;
-
     }
-
+    #options-container button {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
 }
 
-
+/* Mobile devices */
+@media (max-width: 480px) {
+    .main-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+    .container {
+        width: 50%;
+        padding: 8px;
+       right: 30%; 
+       margin-top: 20%;
+       
+    }
+    #options-container {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+        
+    }
+    #prize {
+        padding: 6px 20px;
+        margin-right: 30%;
+        width: 40%;
+    }
+    #prize p span{
+        margin-right: 20px;
+    }
+    #question-container {
+        font-size: 18px;
+    }
+    #options-container button {
+        font-size: 14px;
+        padding: 6px 14px;
+    }
+    #lifelines-container {
+        margin-top: -55%;
+        margin-left: -20%;
+    }
+    #lifelines-container > button {
+        margin: 5px;
+    }
+    #timer span {
+        font-size: 24px;
+    }
+    #result {
+        font-size: 16px;
+    }
+    #controls-container button {
+        font-size: 16px;
+    }
+    .gameover {
+        width: 50%;
+    }
+    .gameover h1 {
+        font-size: 24px;
+    }
+    .gameover a {
+        font-size: 18px;
+    }
+}
